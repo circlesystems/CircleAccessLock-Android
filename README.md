@@ -32,7 +32,7 @@ To use CircleAccessLock in your Android project, follow these steps:
 1. Import the library in your Kotlin or Java code:
 
 ```kotlin
-import com.example.yourlibrary.CircleAccessLock
+import ai.circlesecurity.circleaccesslock.CircleAccessLock
 ```
 
 2. Initialize a CircleAccessLock object in your `MainActivity` or any other `Activity` where you want to show the lock screen:
