@@ -1,11 +1,9 @@
 # CircleAccessLock
 
-CircleAccessLock is a simple Android library for displaying a lock screen usign Circle Technology in your application. It is built in Kotlin and distributed as an AAR file.
+CircleAccessLock is a simple Android library for displaying a lock screen using Circle Technology in your application. It is built in Kotlin and distributed as an AAR file.
 
 ## Features
 
-- Displays a WebView with a configurable URL
-- Allows users to interact with the WebView to perform authentication or other actions
 - Automatically locks the app when the user leaves or when the app becomes inactive
 - Can be enabled or disabled programmatically
 
