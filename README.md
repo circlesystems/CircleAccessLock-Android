@@ -40,13 +40,28 @@ import com.example.yourlibrary.CircleAccessLock
 2. Initialize a CircleAccessLock object in your `MainActivity` or any other `Activity` where you want to show the lock screen:
 
 ```kotlin
-val circleAccessLock = CircleAccessLock(this)
+
+class MainActivity : AppCompatActivity() {
+
+    private lateinit var circleAccessLock: CircleAccessLock
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        circleAccessLock = CircleAccessLock(this)
+        circleAccessLock.onCreate()
+    }
+
+}
 ```
 
-3. Optionally, you can provide an initial URL for the lock screen:
+3. Open the ```AndroidManifest.xml``` file in your app's ```src/main``` directory. Add the ```CircleActivity``` declaration inside the ```<application>``` tag::
 
-```kotlin
-val circleAccessLock = CircleAccessLock(this, initialUrl = "https://your-custom-url.com")
+```xml
+<activity
+    android:name="ai.circlesecurity.circleaccesslock.CircleActivity"
+    android:exported="false" />
 ```
 
 4. To enable or disable the lock screen, use the following methods:
@@ -55,6 +70,12 @@ val circleAccessLock = CircleAccessLock(this, initialUrl = "https://your-custom-
 circleAccessLock.enable()
 circleAccessLock.disable()
 ```
+
+5. Remember to add the access internet permission to the ```AndroidManifest.xml``` file before the ```<application>```
+
+```xml
+ <uses-permission android:name="android.permission.INTERNET" />
+ ```
 
 ## Sample App
 
